@@ -7,7 +7,7 @@ Roberto Barroso, Hana Passen, Charmaine Runes
 Python Version: 
     3.6+
 
-External libraries: On Ubuntu please run the following commands, in order: 
+External libraries: Please run the following commands, in order: 
 -python3.7 -m venv env
 -source env/bin/activate
 -sudo pip install --upgrade pip
@@ -19,7 +19,7 @@ External libraries: On Ubuntu please run the following commands, in order:
 To Run the Software: in terminal, run: 
 - python draft_ui.py
 
-Python Libraries: see requirements.txt
+Python Libraries: pandas, numpy, geopandas, shapely, matplotlib, bs4.
 
 Files: 
     - requirements.txt: a txt file containing the requirements for the virtual
