@@ -42,25 +42,4 @@ Files:
 Directories: 
     - ui: a directory containing the user interface files
     - data: a directory containing all the data files we have used
-
-
-
-
-
-
-
-API Key Information
-
-Chicago City Health Dashboard API Key: 
-- User Name: hpassen
-- Key: 4633880de801584e97b3650ac2eb1a53
-
-
-City of Chicago CTA Data API Key
-- User Name: CAPP30122
-- User ID: 7o4n0hg6q12fvnn1az6ly9ctu
-- User Secret: 539rolgsr8qyun4dny6feie1q483rh7ttvymieeahjqcowvci4
-    
-- API Token: sJyI5hpZy8dZHJBbMhrhdBkyi
-- API Secret: MLhl9HDGfVIimTxv-lXnTorwipMm499xhjTI
  
