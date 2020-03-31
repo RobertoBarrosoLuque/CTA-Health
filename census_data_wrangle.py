@@ -189,8 +189,7 @@ def compile_acs_files():
     '''
     Merges dataframes and returns the full ACS data set.
 
-    Returns: a final pandas DataFrame with relevant data by census tract for all
-             of IL - still need to drop tracts not in Chicago
+    Returns: a final pandas DataFrame with relevant data by census tract
     '''
 
     list_df = []
@@ -225,23 +224,11 @@ def compile_acs_files():
         merged = left_most.merge(next_df, on='tract_code')
         left_most = merged
 
-    # Clean up the age categories
-    '''
-    merged["under18_pct"] = merged["under5_pct"] + merged["5-9_pct"] + \
-                            merged["10-14_pct"] + merged["15-17_pct"]
-    merged["18-24_pct"] = merged["18-19_pct"] + merged["20_pct"] + \
-                          merged["21_pct"] + merged["22-24_pct"]
-    merged["25-39_pct"] = merged["25-29_pct"] + merged["30-34_pct"] + \
-                          merged["35-39_pct"] + merged["40-44_pct"]
-    merged["40-64_pct"] = merged["45-49_pct"] + merged["50-54_pct"] + \
-                          merged["55-59_pct"] + merged["60-61_pct"] + \
-                          merged["62-64_pct"]
-    '''
+    # Create and/or keep appropriate columns
     merged["65over_pct"] = merged["65-66_pct"] + merged["67-69_pct"] + \
                           merged["70-74_pct"] + merged["75-79_pct"] + \
                           merged["80-84_pct"] + merged["85+_pct"]
 
-    # Keep appropriate columns
     merged["poc_pct"] = 100 - merged["nhwhite_pct"]
 
     overall_keep = ["geoid", "nhwhite_pct", "nhblack_pct", "hisp_pct",
@@ -251,4 +238,3 @@ def compile_acs_files():
     merged = merged[overall_keep]
 
     return merged
-

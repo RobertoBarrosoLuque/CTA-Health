@@ -1,12 +1,12 @@
-''' mapper.py
-
-This is an application module that allows a user to find information about
-specific routes.
+''' 
+An application module that allows a user to create a plot of two side-by-side
+maps of the city of Chicago: one map with a public health indicator that is of
+interest, and another with a socioeconomic or demographic indicator that is of
+interest. Both maps will highlight the census tracts underlying one or more 
+elevated ('L') train lines. The application will save the plot to the user's
+working directory.  
 
 Hana Passen, Charmaine Runes, Roberto Barroso
-
-To-do:
-- Fix while loop for invalid inputs (ask Lamont at office hours)
 
 '''
 
@@ -15,7 +15,7 @@ import argparse
 import matplotlib.pyplot as plt
 import make_figures as make
 
-from draft_context import MapContext
+from context import MapContext
 from make_figures import UNITS
 from cta_classes import MetroLine
 
@@ -27,7 +27,7 @@ PUBLIC_HEALTH = ["diabetes", "high_bp", "lead_risk", "life_expectancy",
                  "uninsured", "agg_health_norm"]
 
 SOCIOECONOMIC = ["poverty_pct", "nhblack_pct", "nhwhite_pct", "hisp_pct", 
-                 "poc_pct", "median_rent"]
+                 "poc_pct", "median_rent", "65over_pct"]
 
 
 MENU = '''
@@ -59,6 +59,7 @@ def print_options(valid_list):
     Returns: None, but prints a dictionary of valid arguments and a brief
              description
     '''
+
     print("\n\nChoose ONE of the following indicators:\n{}\n".format(valid_list))
     print('\n'.join("   - {}: {}".format(k, v) for k, v in UNITS.items()
                                                    if k in valid_list))
@@ -74,6 +75,7 @@ def check_if_valid(user_input, valid_list):
 
     Returns: True if the user input a valid argument, False otherwise
     '''
+
     if not user_input or user_input not in valid_list:
         print("\nSorry, {} is not a valid option.".format(user_input))
         print("Please try again using one of the above indicators")
@@ -91,6 +93,7 @@ def request_input_vars():
     Returns: a tuple of (1) the list of lines, (2) the public health indicator,
              and (3) the socioeconomic indicator that the user is interested in
     '''
+
     line_list = None
     ph_indicator = None
     se_indicator = None
@@ -133,6 +136,11 @@ def request_input_vars():
 
 
 def retrieve_task():
+    '''
+    Requests user input on whether to they want to use the application or quit
+    the program. If the user provides an invalid option, raises an error.
+    '''
+
     option = -1
     while True:
         print(MENU)
@@ -145,6 +153,11 @@ def retrieve_task():
 
 
 def main():
+    '''
+    Pulls it all together: runs the UI, requests user input, builds a
+    MapContext object, creates a plot, and saves it in the users directory.
+    '''
+
     while True:
         option = retrieve_task()
         if option == 2:
@@ -159,7 +172,7 @@ def main():
                 plt.savefig("CTA_FIGURE")
                 plt.close(plot)
                 print("\nA figure (CTA_FIGURE) has been saved in your folder.")
-                print("Thanks for using CTA Health\n")
+                print("Thanks for using our application!\n")
             else:
                 print("ERROR: No information for {} or {} \
                     for {} train(s)".format(cxt.ph_var, cxt.se_var, cxt.colors))

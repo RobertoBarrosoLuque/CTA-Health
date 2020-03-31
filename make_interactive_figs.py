@@ -3,13 +3,22 @@ Plotting module.
 
 Written by: Hana Passen, Charmaine Runes and Roberto Barroso
 '''
+import geoviews as gv
+%load_ext autoreload
+%autoreload2
+import cta_classes
+gv.extension('bokeh')
+gv.Polygons(red.census_tracts, )
 
 import numpy as np
 import matplotlib.pyplot as plt
 from mpl_toolkits.axes_grid1 import make_axes_locatable
 import geopandas as gpd
 import pandas as pd
-from cta_classes import MetroLine
+import geoviews as gv
+import geoviews.feature as gf
+from geoviews import dim, opts
+gv.extension('bokeh')
 
 CENSUS_TRACTS = gpd.read_file('data/ChicagoShapefiles/Chi_census_tract.shp')
 UNITS = {"diabetes": "Diabetes among adults aged ≥18 years (%)",

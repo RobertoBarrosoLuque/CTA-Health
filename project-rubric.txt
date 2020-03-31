@@ -1,0 +1,146 @@
+Note on the Rubric 
+------------------
+Professor Ferrari and Samuels conferred on all projects before assigning a final project grade to each one. Although some of the grading criteria may appear subjective to you, we were as objective as possible and assigned almost all the grades using checkpoints on the essential parts that we required for the project. 
+
+The soft criterium we used is mostly concentrated on items #2 (Data Analysis) and #3 (Scope and Complexity). The final grade for those items resulted from Instructors' joint evaluation of all the projects as a whole. We are also recognizing in those rubrics team's effort and dedication. We consider a project more complex if it required different types of skills and used more diverse content we covered in during the quarter (e.g., if the team downloaded and used two ready-to-use data sets VS if the data was constructed using complex webscraping, data cleaning, record linkage, and everything was stored in a relational SQL database).
+
+Please note that these grades are final! We will not make any grade adjusts unless it is due to an arithmetic error. 
+
+As always with assignments, feel free to reach out if you do have any questions about improvement or clarification. Please respond via email if you do have any questions (not on piazza). With moving to remote learning for the spring, We will be busy preparing for the next quarter so we may not have a chance to respond right away. 
+
+-------
+
+Project Evaluation Points:
+    - Completeness & Correctness (Project Requirements):
+        Points Possible: 60
+        Points Obtained: 56
+
+    - Design:
+        Points Possible: 25
+        Points Obtained: 25
+
+    - Coding Style:
+        Points Possible: 15
+        Points Obtained: 15
+
+
+Total Points: 96 / 100
+
+
+Breakdown of Completeness & Correctness:       
+
+  - Contains README and/or a pdf with textual information describing the project.
+        Points Possible: 10
+        Points Obtained: 10
+	
+  - Fulfills requirement #1: Two Data Sources(Web or API and another source)
+        Points Possible: 15
+        Points Obtained: 15
+
+  - Fulfills requirement #2: Data analysis component
+        Points Possible: 15
+        Points Obtained: 15
+
+  - Fulfills requirement #3: Project Scope & Complexity
+        Points Possible: 15
+        Points Obtained: 12
+    
+   ##Comment: Overall I think this project is great! Your graphs really do look amazing and I think that adding the graphical component would have made it easier to interact with your application. The textui is good but in the case of your project a graphical representation would have been better. I think it could have added more complexity to the application in comparison to your peers. 
+
+
+  - Fulfills requirement #4: Visualization or Textual Component
+        Points Possible: 5
+        Points Obtained: 4
+
+   ##Comment: You should provide more information about the format to enter in more than one metro line. 
+   The prompt doesn't indicate you need a comma between the lines. For example I get this error when I try to enter in red and blue
+
+REQUIRED - Enter one or more MetroLines: red blue
+
+Please make sure you choose only from the following:
+ 
+ 
+ 
+ 
+-
+ 
+<
+g
+e
+n
+e
+r
+a
+t
+o
+r
+ 
+o
+b
+j
+e
+c
+t
+ 
+r
+e
+q
+u
+e
+s
+t
+_
+i
+n
+p
+u
+t
+_
+v
+a
+r
+s
+.
+<
+l
+o
+c
+a
+l
+s
+>
+.
+<
+g
+e
+n
+e
+x
+p
+r
+>
+ 
+a
+t
+ 
+0
+x
+7
+f
+5
+e
+5
+4
+c
+7
+b
+a
+9
+8
+>
+
+
+
+
+Comments: >
+
